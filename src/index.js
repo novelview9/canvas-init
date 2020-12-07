@@ -6,8 +6,10 @@ const canvasEvent = function () {
     context.beginPath();
     context.strokeStyle = "black";
     context.lineWidth = 5;
-    context.arc(100, 100, 20, (Math.PI / 180) * 0, (Math.PI / 180) * 90, true);
+    context.moveTo(100, 0);
+    context.bezierCurveTo(0, 495, 300, 55, 150, 300);
     context.stroke();
+
     context.closePath();
 };
 window.addEventListener("load", canvasEvent, false);
